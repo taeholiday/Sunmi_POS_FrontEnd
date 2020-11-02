@@ -4,54 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:orientation="vertical"
-    tools:context=".Login_Activity">
+    tools:context=".MainActivity">
 
    <LinearLayout
        android:id="@+id/linearLayout"
-       android:layout_width="603dp"
-       android:layout_height="711dp"
-       android:gravity="center"
+       android:layout_width="321dp"
+       android:layout_height="130dp"
+       android:layout_marginBottom="76dp"
        android:orientation="vertical"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent">
+       app:layout_constraintStart_toStartOf="parent">
 
-      <ImageView
-          android:id="@+id/imageView2"
-          android:layout_width="match_parent"
-          android:layout_height="587dp"
-          app:srcCompat="@drawable/logoapp2" />
-
-      <LinearLayout
+      <Button
+          android:id="@+id/btn_registerGo"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:orientation="vertical">
+          android:text="ลงทะเบียน" />
 
-         <Button
-             android:id="@+id/btn_registergo"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:text="ลงทะเบียน" />
-
-
-      </LinearLayout>
-
-      <LinearLayout
+      <Button
+          android:id="@+id/btn_loginGo"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:orientation="vertical">
-
-         <Button
-             android:id="@+id/btn_login"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:text="ลงชื่อเข้าใช้" />
-      </LinearLayout>
-
+          android:text="ลงชื่อเข้าใช้" />
    </LinearLayout>
 
+   <LinearLayout
+       android:id="@+id/linearLayout4"
+       android:layout_width="0dp"
+       android:layout_height="359dp"
+       android:orientation="vertical"
+       app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="1.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.469">
 
+      <ImageView
+          android:id="@+id/imageView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:srcCompat="@drawable/ic_baseline_point_of_sale_24" />
+   </LinearLayout>
+
+   <TextView
+       android:id="@+id/textnameapp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:fontFamily="@font/poppinsbold"
+       android:text="SUNMI Point Of Sales"
+       android:textColor="#FF6720"
+       android:textSize="24sp"
+       android:textStyle="bold"
+       app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

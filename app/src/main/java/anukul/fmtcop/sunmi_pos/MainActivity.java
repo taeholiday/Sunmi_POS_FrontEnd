@@ -18,20 +18,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button Login = (Button) findViewById(R.id.btn_login);
-        Login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Login_Activity.class);
-                startActivity(i);
-            }
-        });
 
-        Button register = (Button) findViewById(R.id.btn_registergo);
+        Button register = (Button) findViewById(R.id.btn_registerGo);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, register_Activity.class);
+                startActivity(i);
+            }
+        });
+
+        Button Login = (Button) findViewById(R.id.btn_loginGo);
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, Login_Activity.class);
                 startActivity(i);
             }
         });

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login_Activity">
 
-    <LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="528dp"
@@ -39,6 +43,7 @@
             android:id="@+id/EditText_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_user"
             android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress" />
@@ -47,6 +52,7 @@
             android:id="@+id/EditText_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_password"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword" />
@@ -81,3 +87,4 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

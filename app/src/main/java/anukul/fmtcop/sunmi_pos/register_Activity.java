@@ -10,6 +10,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,16 @@ public class register_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_);
+
+        //toolbar
+        ImageView backIcon = findViewById(R.id.back_icon);
+        backIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(register_Activity.this,MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         //edit_text;
         eEmail = findViewById(R.id.editText_addemail);
@@ -74,6 +85,7 @@ public class register_Activity extends AppCompatActivity {
         }
         else if (isEmpty(ePhoneNumber)){
             Toast.makeText(this,"กรุณากรอกเบอร์โทรศัพท์",Toast.LENGTH_SHORT).show();
+            ePhoneNumber.setError();
         }
         else{
             int mphonenumber = Integer.parseInt(ePhoneNumber.getText().toString());

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Sunmi_pos</string>
+    <string name="sales">การขาย</string>
+    <string name="receipt">ออกใบเสร็จรับเงิน</string>
+    <string name="addproduct">รายการสินค้า</string>
+    <string name="sattings">การตั้งค่า</string>
+    <string name="pos">ชื่อร้านค้า</string>
+    <string name="nav_open">Open navigation Drawer</string>
+    <string name="nav_Close">Open navigation Close</string>
 </resources>

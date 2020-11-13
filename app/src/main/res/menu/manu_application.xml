@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" >
+        <item
+            android:id="@+id/nav_Sales"
+            android:icon="@drawable/manu_sales"
+            android:title="@string/sales" />
+        <item
+            android:id="@+id/nav_receipt"
+            android:icon="@drawable/icon_receipt"
+            android:title="@string/receipt" />
+        <item
+            android:id="@+id/nav_addproduct"
+            android:icon="@drawable/icon_addproduct"
+
+            android:title="@string/addproduct" />
+        <item
+            android:id="@+id/nav_Settings"
+            android:icon="@drawable/icon_settings"
+            android:title="@string/sattings" />
+    </group>
+    <item android:title="--------------------------------" />
+    <item
+        android:id="@+id/nav_back_store"
+        android:icon="@drawable/ic_back_store_system"
+        android:title="ระบบหลังร้าน" />
+</menu>

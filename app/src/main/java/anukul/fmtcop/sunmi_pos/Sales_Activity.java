@@ -1,11 +1,16 @@
 package anukul.fmtcop.sunmi_pos;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.google.android.material.navigation.NavigationView;
 
 public class Sales_Activity extends AppCompatActivity {
 
@@ -14,14 +19,19 @@ public class Sales_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales_);
 
-        Button logout = findViewById(R.id.btn_Logout);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Sales_Activity.this, Login_Activity.class);
-                startActivity(i);
-            }
-        });
+        NavigationView navigationView = findViewById(R.id.navigation_view);
+
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
+                drawerLayout,
+                toolbar,
+                R.string.nav_open,
+                R.string.nav_Close
+        );
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
     }
 }
